@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return 'Hello Laravel';
 });
+
+Route::get('/para', 'LIController@getIndex');
+Route::post('/para', 'LIController@postIndex');
