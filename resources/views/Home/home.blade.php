@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Show paragraphs
+    Home page for Programmer's best friend
 @stop
 
 
@@ -16,29 +16,15 @@ such as a page specific styesheets.
 @stop
 
 @section('sub-heading')
-  Show Lorem Ipsum paragraphs
+  Home
 @stop
 
 @section('content')
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
-  @if(count($errors) > 0)
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
- @endif
-  <form class="form-horizontal" method="POST" action="/para">
-  <input type='hidden' name='_token' value='{{ csrf_token() }}'>
-  <div class="form-group">
-    <label for="para">Number of paragraphs</label>
-    <div class="input-group">
-    <input type="text" class="form-control" id="para" name="para" placeholder="3">
-    </div>
-  </div>
-  <input type="submit" class="btn btn-primary">Show Paragraphs</button>
-  </form>
+  <h2>Home page info will come here</h2>
+  <h3><a href="/para">Lorem Ipsum Generator</h3>
+  
 </div>
 </div>
 @stop

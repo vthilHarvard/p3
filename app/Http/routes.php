@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     //return view('welcome');
     return 'Hello Laravel';
-});
-
+});*/
+Route::get('/', 'HomeController@getIndex');
 Route::get('/para', 'LIController@getIndex');
 Route::post('/para', 'LIController@postIndex');

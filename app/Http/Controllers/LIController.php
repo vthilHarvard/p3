@@ -28,6 +28,10 @@ class LIController extends Controller
     public function postIndex(Request $request)
     {
         //
+      $this->validate($request, [
+          'para' => 'required|integer|min:1|max:10'
+          ]);
+        //dd($request->all());
         return 'Process the paragraph form';
     }
 
