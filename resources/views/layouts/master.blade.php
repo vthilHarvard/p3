@@ -15,13 +15,20 @@
 </head>
 <body>
     <header>
-      <div class="jumbotron">
-        <h1>Programmer's best friend</h1>
+      <div class="jumbotron center">
+        <div class="row">
+        <div class="col-sm-1">
+        <a href="/"><img src="images/jongalloway-Pluged-in-coder-300px-smaller.png" alt="plugged in programmer" title="Plugged in programmer"/></a>
+        </div>
+        <div class="col-sm-10">
+        <h1 class="text-center">Programmer's best friend</h1>
         <section>
           {{-- Sub heading will be yielded here --}}
-          <h2>@yield('sub-heading')</h2>
+          <h2 class="text-center">@yield('sub-heading')</h2>
         </section>
       </div>
+      </div>
+    </div>
     </header>
 
     <section>
@@ -32,6 +39,7 @@
     <footer>
       <div class="row center">
        <p class="text-center">&copy; {{ date('Y') }}</p>
+        <p class="text-center"><a href="https://openclipart.org/detail/3580/pluged-in-coder">Logo image from open clipart library</a></p>
       </div>
     </footer>
 

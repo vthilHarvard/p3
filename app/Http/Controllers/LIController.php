@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Badcow\LoremIpsum;
 
 class LIController extends Controller
 {
@@ -31,8 +32,12 @@ class LIController extends Controller
       $this->validate($request, [
           'para' => 'required|integer|min:1|max:10'
           ]);
+          $data = $request->all();
+          $count = $data['para'];
         //dd($request->all());
-        return 'Process the paragraph form';
+        $generator = new LoremIpsum\Generator();
+        $text_data = $generator->getParagraphs($count);
+        return view('LI.postindex')->with(['data' => $data, 'paragraphs' => $text_data]);
     }
 
 

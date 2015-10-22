@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
-
 @section('title')
-    Home page for Programmer's best friend
+    Generate Lorem Ipsum
 @stop
 
 
@@ -16,22 +15,20 @@ such as a page specific styesheets.
 @stop
 
 @section('sub-heading')
-  Some tools of the trade
+  Show Lorem Ipsum paragraphs
 @stop
 
 @section('content')
 <div class="row">
-  <div class="col-md-3">
-    <img src="images/jongalloway-Pluged-in-coder-300px.png" alt="plugged in programmer" title="Plugged in programmer"/>
-  </div>
-<div class="col-md-9">
-  <h3>There are many possible tools that can ease the burden of a programmer's job as he or she toils away into the wee hours of the morning.</h3>
-  <h4>Here are a couple of them:
-  <ol>
-    <li><a href="/para">Lorem Ipsum Generator</a>- Enter the number of paragraphs of filler text that you need</li>
-  <li><a href="/user">Random User Generator</a>- Enter the number of random user information you're looking for</li>
-</ol>
-</h4>
+<div class="col-md-8 col-md-offset-2">
+  <h3>Number of paragraphs requested: {{ $data['para'] }}</h3>
+  @if(count($paragraphs) > 0)
+      @foreach($paragraphs as $paragraph)
+          <p>{{ $paragraph }}</p>
+      @endforeach
+  @else
+      No paragraphs
+  @endif
 
 </div>
 </div>

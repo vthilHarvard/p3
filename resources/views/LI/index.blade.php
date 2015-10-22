@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
-
 @section('title')
-    Show paragraphs
+    Generate Lorem Ipsum
 @stop
 
 
@@ -29,15 +28,15 @@ such as a page specific styesheets.
         @endforeach
     </ul>
  @endif
-  <form class="form-horizontal" method="POST" action="/para">
+  <form class="form-vertical" method="POST" action="/para">
   <input type='hidden' name='_token' value='{{ csrf_token() }}'>
   <div class="form-group">
-    <label for="para">Number of paragraphs</label>
+    <label for="para">Number of paragraphs: Enter a number in the range of 1-10</label>
     <div class="input-group">
     <input type="text" class="form-control" id="para" name="para" placeholder="3">
     </div>
   </div>
-  <input type="submit" class="btn btn-primary">Show Paragraphs</button>
+  <button type="submit" class="btn btn-primary">Show Paragraphs</button>
   </form>
 </div>
 </div>
