@@ -30,7 +30,7 @@ class LIController extends Controller
     {
         //
       $this->validate($request, [
-          'para' => 'required|integer|min:1|max:10'
+          'users' => 'required|integer|min:1|max:100'
           ]);
           $data = $request->all();
           $count = $data['para'];

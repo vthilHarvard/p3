@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Generate Lorem Ipsum
+    Generate random users
 @stop
 
 
@@ -15,7 +15,7 @@ such as a page specific styesheets.
 @stop
 
 @section('sub-heading')
-  Create Lorem Ipsum paragraphs
+  Create Random Users
 @stop
 
 @section('content')
@@ -28,15 +28,15 @@ such as a page specific styesheets.
         @endforeach
     </ul>
  @endif
-  <form class="form-vertical" method="POST" action="/para">
+  <form class="form-vertical" method="POST" action="/users">
   <input type='hidden' name='_token' value='{{ csrf_token() }}'>
   <div class="form-group">
-    <label for="para">Number of paragraphs: Enter a number in the range of 1-10</label>
+    <label for="users">Number of users(Enter a number between 1 and 100)</label>
     <div class="input-group">
-    <input type="text" class="form-control" id="para" name="para" placeholder="3">
+    <input type="text" class="form-control" id="users" name="users" placeholder="3">
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Show Paragraphs</button>
+  <button type="submit" class="btn btn-primary">Show Users</button>
   </form>
 </div>
 </div>

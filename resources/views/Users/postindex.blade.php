@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Generate Lorem Ipsum
+    Show Users
 @stop
 
 
@@ -15,29 +15,26 @@ such as a page specific styesheets.
 @stop
 
 @section('sub-heading')
-  Create Lorem Ipsum paragraphs
+  Show Users
 @stop
 
 @section('content')
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
-  @if(count($errors) > 0)
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
- @endif
-  <form class="form-vertical" method="POST" action="/para">
-  <input type='hidden' name='_token' value='{{ csrf_token() }}'>
-  <div class="form-group">
-    <label for="para">Number of paragraphs: Enter a number in the range of 1-10</label>
-    <div class="input-group">
-    <input type="text" class="form-control" id="para" name="para" placeholder="3">
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Show Paragraphs</button>
-  </form>
+  <h3>Number of users requested: {{ $data['users'] }}</h3>
+  @if(count($users_data) > 0)
+      @foreach($users_data as $person)
+          <h4 class="text-success">{{ $person['name'] }}</h4>
+          <p>{{ $person['address'] }}<br/>
+          <em>{{ $person['email'] }}</em></p>
+          
+      @endforeach
+  @else
+      No paragraphs
+  @endif
+
+
+
 </div>
 </div>
 @stop

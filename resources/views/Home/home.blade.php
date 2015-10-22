@@ -21,17 +21,18 @@ such as a page specific styesheets.
 
 @section('content')
 <div class="row">
-  <div class="col-md-3">
-    <img src="images/jongalloway-Pluged-in-coder-300px.png" alt="plugged in programmer" title="Plugged in programmer"/>
+
+<div class="col-md-8 col-md-offset-2">
+  <div class="row">
+    <img class="img-center" src="images/jongalloway-Pluged-in-coder-300px.png" alt="plugged in programmer" title="Plugged in programmer"/>
   </div>
-<div class="col-md-9">
-  <h3>There are many possible tools that can ease the burden of a programmer's job as he or she toils away into the wee hours of the morning.</h3>
-  <h4>Here are a couple of them:
+  <h3 class="text-center text-warning">Behold the lonely developer/programmer, who has developed a hunch before turning 30!!<br/></h3>
+  <h4 class="text-center">There are many possible tools that can ease the burden of a programmer's job as he or she toils away into the wee hours of the morning.</h4>
+  <h4>Here are a couple of them:</h4>
   <ol>
     <li><a href="/para">Lorem Ipsum Generator</a>- Enter the number of paragraphs of filler text that you need</li>
-  <li><a href="/user">Random User Generator</a>- Enter the number of random user information you're looking for</li>
+  <li><a href="/users">Random User Generator</a>- Enter the number of random user information you're looking for</li>
 </ol>
-</h4>
 
 </div>
 </div>

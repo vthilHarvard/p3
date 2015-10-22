@@ -18,3 +18,5 @@
 Route::get('/', 'HomeController@getIndex');
 Route::get('/para', 'LIController@getIndex');
 Route::post('/para', 'LIController@postIndex');
+Route::get('/users', 'UserController@getIndex');
+Route::post('/users', 'UserController@postIndex');
