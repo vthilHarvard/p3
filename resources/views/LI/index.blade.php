@@ -28,6 +28,7 @@ such as a page specific styesheets.
         @endforeach
     </ul>
  @endif
+ <h3>How many paragraphs of lorem ipsum text would you like?</h3>
   <form class="form-vertical" method="POST" action="/para">
   <input type='hidden' name='_token' value='{{ csrf_token() }}'>
   <div class="form-group">

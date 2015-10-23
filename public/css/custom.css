@@ -40,3 +40,18 @@ footer {
     padding: 10px 0 10px 0;
     margin: 10px 0;
 }
+label {
+  font-size: 18px;
+}
+.navbar .navbar-default {
+  font-size: 18px;
+}
+
+#mainnav li a {
+    font-size: 18px;
+}
+
+#brand_image {
+ margin-top:-8px;
+
+}

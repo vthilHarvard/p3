@@ -28,6 +28,7 @@ such as a page specific styesheets.
         @endforeach
     </ul>
  @endif
+ <h3>How many random user's information would you like?</h3>
   <form class="form-vertical" method="POST" action="/users">
   <input type='hidden' name='_token' value='{{ csrf_token() }}'>
   <div class="form-group">

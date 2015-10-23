@@ -19,6 +19,10 @@ width:90%;
     color: mediumturquoise;
 }
 
+h1 a:hover, h1 a:active, h1 a:link, h1 a:visited {
+  color: mediumturquoise;
+}
+
 .center {
   float: none;
   margin-left: auto;
@@ -39,4 +43,16 @@ footer {
     background-color:black;
     padding: 10px 0 10px 0;
     margin: 10px 0;
+}
+
+.navbar .navbar-default {
+  font-size: 18px;
+}
+
+ #brand_image {
+  margin-top:-50px;
+
+}
+.navbar-brand > img {
+  margin-top:-50px;
 }

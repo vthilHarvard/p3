@@ -17,10 +17,7 @@
     <header>
       <div class="jumbotron center">
         <div class="row">
-        <div class="col-sm-1">
-        <a href="/"><img src="images/jongalloway-Pluged-in-coder-300px-smaller.png" alt="plugged in programmer" title="Plugged in programmer"/></a>
-        </div>
-        <div class="col-sm-10">
+        <div class="col-sm-10 col-sm-offset-1">
         <h1 class="text-center">Programmer's best friend</h1>
         <section>
           {{-- Sub heading will be yielded here --}}
@@ -30,7 +27,34 @@
       </div>
     </div>
     </header>
-
+  {{-- Navigation bar goes here --}}
+  <nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- Replace text with image for branding -->
+			<a class="navbar-brand" rel="home" href="/" title="Home">
+				<img id="brand_image" src="images/jongalloway-Pluged-in-coder-300px-smaller.png" alt="Programmer brand image" title="Plugged in programmer"/>
+			</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul id="mainnav" class="nav navbar-nav">
+				<li class="{{ Request::is('/') ? 'active' :'' }}"><a href="/">Home</a></li>
+				<li class="{{ Request::is('para') ? 'active' :'' }}"><a href="/para">LoremIpsum</a></li>
+				<li class="{{ Request::is('users') ? 'active' :'' }}"><a href="/users">Random Users</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
     <section>
         {{-- Main page content will be yielded here --}}
         @yield('content')

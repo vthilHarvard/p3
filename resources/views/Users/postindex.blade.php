@@ -27,7 +27,7 @@ such as a page specific styesheets.
           <h4 class="text-success">{{ $person['name'] }}</h4>
           <p>{{ $person['address'] }}<br/>
           <em>{{ $person['email'] }}</em></p>
-          
+          <br/>
       @endforeach
   @else
       No paragraphs
